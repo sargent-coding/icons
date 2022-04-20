@@ -24,7 +24,7 @@ let myNewIcon = new Icon("pencil");
 document.body.append(myNameIcon);
 ```
 
-#### The `Element.setAttribute()` method
+#### The `document.createElement()` method
 But, you can also create an element and set its `name` attribute:
 ```javascript
 let myNewIcon = document.createElement("saco-icon");
