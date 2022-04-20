@@ -161,15 +161,18 @@ class Icon extends HTMLElement {
     style.textContent = `saco-icon {display: inline-block; height: 1em;} saco-icon svg {display: inline-block; height: 100%; width: 100%; min-height: 100%; min-width: 100%;} saco-icon svg *[fill] {fill: currentColor;} saco-icon svg *[stroke] { stroke: currentColor;}`
     
     this.update = () => {
-      let symbol = icons;
-      let name = this.name;
-      if (name) {
-        name = name.split(".")
-        for (let i of name) {
-          symbol = symbol[i];
-        }
+      let loop = (name) => {
+        try {
+          let split = name.split(".");
+          let look = icons;
+          for (let i in split) {
+            look = look[split.slice(i).join(".")] || look[split[i]];
+            if (typeof look == "string") return look;
+          }
+        } catch (err) {}
       }
-      this.innerHTML = icons[name] || symbol;
+      let symbol = loop(this.name);
+      this.innerHTML = loop(this.name);
       if (!symbol) {
         this.innerHTML = "￼";
         console.warn(`Failed to load icon "${this.getAttribute("name")}".`);
