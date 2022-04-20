@@ -38,7 +38,7 @@ myNewIcon.name = "javascript";
 ```
 
 #### Settings the `name` attribute
-or you can also use `document.setAttribute()`:
+or you can also use `Element.setAttribute()`:
 ```javascript
 myNewIcon.setAttribute("name", "javascript");
 ```
