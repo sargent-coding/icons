@@ -47,6 +47,9 @@ or you can also use `Element.setAttribute()`:
 myNewIcon.setAttribute("name", "javascript");
 ```
 
+### Changing the colours of an icon
+Colours automatically change to the font colour using the really cool `currentColor` keyword!
+
 ## Credits
 ###### All icons as of 20 April 2022 were designed by @aetinx.
 

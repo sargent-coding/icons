@@ -1,0 +1,89 @@
+<script src="/icons.js" defer></script>
+
+<link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/89470036"/>
+<title>Sargent Coding Icons</title>
+
+<h1>Sargent Coding Icons</h1>
+<p><saco-icon name="saco"></saco-icon>&emsp;These icons were originally created for Sargent Coding projects, but they're open for everyone to use now.</p>
+<p><saco-icon name="cursor"></saco-icon>&emsp;Click on an icon to copy the name!</p>
+<p><saco-icon name="info"></saco-icon>&emsp;For more info, please read the <a href="/README.md">README.md</a> file.</p>
+
+<div id="icons"></div>
+
+<style>
+  @import url('https://rsms.me/inter/inter.css?v=3.19');
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+  
+  body {
+    padding: 100px;
+    margin: 0;
+    font-family: Inter;
+    letter-spacing: -0.02em;
+  }
+
+  h1 {
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+
+  p {
+    color: #0000007f;
+    margin: 25px 0;
+  }
+
+  p saco-icon {
+    position: relative;
+    top: -0.1rem;
+    vertical-align: middle;
+  }
+  
+  #icons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 25px;
+    margin-top: 75px;
+  }
+  
+  #icons > div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  #icons > div saco-icon {
+    height: 20px;
+  }
+
+  #icons > div span {
+    letter-spacing: unset;
+  }
+</style>
+
+<script defer>
+window.onload = () => {
+  let loop = (item, name, prefix) => {
+    if (typeof item != "object") {
+      let iconName = prefix.length > 0 ? prefix.join(".") + "." + name : name;
+      let div = document.createElement("div");
+      div.onclick = (event) => {
+        try {
+          navigator.clipboard.writeText(iconName);
+          window.alert(`Copied "${iconName}" to your clipboard!`);
+        } catch (err) {}
+      }
+      div.append(new Icon(iconName));
+      let nameElement = document.createElement("span");
+      nameElement.innerText = iconName;
+      div.append(nameElement);
+      document.getElementById("icons").append(div);
+    } else {
+      for (let [key, value] of Object.entries(item)) {
+        let newPrefix = [];
+        if (prefix) newPrefix.push(name);
+        loop(value, key, newPrefix);
+      }
+    }
+  }
+  loop(icons);
+}
+</script>
