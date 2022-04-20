@@ -1,10 +1,12 @@
 # Sargent Coding Icons
-These icons were originally created for Sargent Coding projects, but they're open to everyone to use now.
+These icons were originally created for Sargent Coding projects, but they're open for everyone to use now.
+
+You can use the library via JSDeliver at https://cdn.jsdelivr.net/gh/sargent-coding/icons/icons.js
 
 ## How to use
-The icons framework has three ways of adding icons:
+The icons library has three ways of adding icons:
 ### Inline icons
-You can add an inline icon by placing something like:
+You can add an inline icon in an HTML by placing something like:
 ```html
 <saco-icon name="pencil"></saco-icon>
 ```
