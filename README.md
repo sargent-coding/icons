@@ -1,7 +1,7 @@
 # Sargent Coding Icons
 These icons were originally created for Sargent Coding projects, but they're open for everyone to use now.
 
-You can use the library via JSDeliver at https://cdn.jsdelivr.net/gh/sargent-coding/icons/icons.js
+You can use the library via JSDelivr at https://cdn.jsdelivr.net/gh/sargent-coding/icons/icons.js
 
 ## How to use
 The icons library has three ways of adding icons:
