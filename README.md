@@ -3,7 +3,7 @@ These icons were originally created for Sargent Coding projects, but they're ope
 
 You can use the library via JSDelivr at https://cdn.jsdelivr.net/gh/sargent-coding/icons/icons.js
 
-## How to use
+## Usage
 The icons library has three ways of adding icons:
 
 <sup>**Quick note:** Icons like `caret.right` and `font.family` are nested. These can be used as names too: `new Icon("caret.right")`</sup>
