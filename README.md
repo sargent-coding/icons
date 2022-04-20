@@ -5,11 +5,15 @@ You can use the library via JSDeliver at https://cdn.jsdelivr.net/gh/sargent-cod
 
 ## How to use
 The icons library has three ways of adding icons:
+
+<sup>**Quick note:** Icons like `caret.right` and `font.family` are nested. These can be used as names too: `new Icon("caret.right")`</sup>
+
 ### Inline icons
 You can add an inline icon in an HTML by placing something like:
 ```html
 <saco-icon name="pencil"></saco-icon>
 ```
+
 ### Adding icons via Javascript
 You also have ***two*** methods of adding icons using Javascript:
 
