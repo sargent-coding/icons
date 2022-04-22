@@ -41,7 +41,7 @@ You can set the `name` property to something else:
 myNewIcon.name = "javascript";
 ```
 
-#### Settings the `name` attribute
+#### Setting the `name` attribute
 or you can also use `Element.setAttribute()`:
 ```javascript
 myNewIcon.setAttribute("name", "javascript");
