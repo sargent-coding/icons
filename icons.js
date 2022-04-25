@@ -1,3 +1,10 @@
+/*
+
+Sargent Coding Icons
+Designed + developed with 🌸 by Aetinx
+
+*/
+
 var icons = {
   aeroplane: `<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.49998 7.125L2.17998 7.365C2.06314 7.45263 1.92103 7.5 1.77498 7.5C1.40218 7.5 1.09998 7.19779 1.09998 6.825V5.175C1.09998 4.80221 1.40218 4.5 1.77498 4.5C1.92103 4.5 2.06314 4.54737 2.17998 4.635L2.49998 4.875C2.82453 5.11842 3.21928 5.25 3.62498 5.25H5.49998L4.2754 2.18857C4.14348 1.85876 4.38637 1.5 4.74159 1.5C4.90374 1.5 5.05591 1.57831 5.15016 1.71026L7.49998 5H9.99998C10.5523 5 11 5.44772 11 6C11 6.55228 10.5523 7 9.99998 7H7.49998L5.15016 10.2897C5.05591 10.4217 4.90374 10.5 4.74159 10.5C4.38637 10.5 4.14348 10.1412 4.2754 9.81143L5.49998 6.75H3.62498C3.21928 6.75 2.82453 6.88158 2.49998 7.125Z" stroke="black" stroke-linejoin="round"/></svg>`,
   alt: `<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 9.5H3.82297C4.23187 9.5 4.59958 9.25105 4.75144 8.87139L7.04856 3.12861C7.20042 2.74895 7.56813 2.5 7.97703 2.5H9.8M9.8 9.5H7.3" stroke="black" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
@@ -361,7 +368,7 @@ class Icon extends HTMLElement {
     super();
     
     let style = document.createElement("style");
-    style.textContent = `saco-icon {display: inline-block; height: 1em;} saco-icon svg {display: inline-block; height: 100%; width: 100%; min-height: 100%; min-width: 100%;} saco-icon svg *[fill] {fill: currentColor;} saco-icon svg *[stroke] { stroke: currentColor;}`
+    style.textContent = `saco-icon {display: inline-block; height: 1em; transform: scale(1.2)} saco-icon svg {display: inline-block; height: 100%; width: 100%; min-height: 100%; min-width: 100%;} saco-icon svg *[fill] {fill: currentColor;} saco-icon svg *[stroke] { stroke: currentColor;}`
     
     this.update = () => {
       let loop = (name) => {
