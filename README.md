@@ -51,7 +51,7 @@ myNewIcon.setAttribute("name", "javascript");
 Colours automatically change to the font colour using the really cool `currentColor` keyword!
 
 ## Credits
-###### All icons as of 20 April 2022 were designed by @aetinx.
+###### All icons as of 2.0.0 were designed by @aetinx.
 
 ###### [Sargent Coding Icons](https://github.com/sargent-coding/icons/) by [Sargent Coding](https://saco.ml) is licensed under [CC BY-ND 4.0](http://creativecommons.org/licenses/by-nd/4.0/)
 
