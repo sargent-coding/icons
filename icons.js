@@ -429,35 +429,22 @@ class Icon extends HTMLElement {
     style.textContent = `saco-icon {display: inline-block; height: 1em; transform: scale(1.2)} saco-icon svg {display: inline-block; height: 100%; width: 100%; min-height: 100%; min-width: 100%;} saco-icon svg *[fill] {fill: currentColor;} saco-icon svg *[stroke] { stroke: currentColor;}`
     
     this.update = () => {
-      let loop = (name) => {
-        try {
-          let split = name.split(".");
-          let look = icons;
-          for (let i in split) {
-            look = look[split.slice(i).join(".")] || look[split[i]];
-            if (typeof look == "string") return look;
-          }
-        } catch (err) {}
-      }
-      let symbol = loop(this.name);
-      this.innerHTML = loop(this.name);
+      let symbol = icons[this.name];
+      this.innerHTML = symbol || icons.missing;
       if (!symbol) {
-        this.innerHTML = "￼";
-        console.warn(`Failed to load icon "${this.getAttribute("name")}".`);
-        this.title = this.getAttribute("name");
-        this.onclick = (event) => {
-          alert(`😵‍💫 Icon "${this.getAttribute("name")}" couldn't be found.`);
-        }
-      }
+        console.warn(`Failed to load icon "${this.name}".`);
+        this.title = this.name;
+      } else {
+        this.removeAttribute("title");
+      }      
+      this.style.opacity = symbol ? 1 : 0.5;
       this.append(style);
     }
 
     if (initName) this.name = initName;
   }
   
-  connectedCallback() {
-    this.update();
-  }
+  connectedCallback() {}
 
   attributeChangedCallback(name, older, newer) {
     this.update();
